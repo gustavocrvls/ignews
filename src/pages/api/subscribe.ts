@@ -17,8 +17,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === 'POST') {
     const session = await getSession({ req });
 
-
-
     const user = await fauna.query<TUser>(
       q.Get(
         q.Match(
@@ -46,7 +44,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         )
       )
 
-      custumerId = stripeCustumer.id; 
+      custumerId = stripeCustumer.id;
     }
 
     const stripeCheckoutSession = await stripe.checkout.sessions.create({
