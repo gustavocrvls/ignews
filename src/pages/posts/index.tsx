@@ -20,7 +20,9 @@ interface PostsProps {
 export default function Posts({ posts }: PostsProps) {
   return (
     <>
-      <Head>Posts | Ignews</Head>
+      <Head>
+        <title>Posts | Ignews</title>
+      </Head>
 
       <main className={styles.container}>
         <div className={styles.posts}>
