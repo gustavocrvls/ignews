@@ -19,7 +19,7 @@ jest.mock('next-auth/client', () => {
   }
 })
 
-describe('ActiveLink Component', () => {
+describe('Header Component', () => {
 
   it('renders correctly', () => {
     render(
